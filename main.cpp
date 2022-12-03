@@ -17,6 +17,9 @@ odd_iterator::~odd_iterator(){};
 odd_iterator::odd_iterator(const odd_iterator& s){
     for (int i=0;i<size;i++){
         m_data[i] = s.m_data[i];
+        if (m_data[i] % 2 == 0){
+            std::cout <<"The iterator is wrong" <<std::endl;
+        }
     }
 };//copy
 
